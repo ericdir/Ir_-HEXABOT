@@ -1,0 +1,27 @@
+1.Install Arduino IDE if you don't have the software. can be downloaded here 
+  https://code.google.com/p/arduino/downloads/detail?name=arduino-1.0.5-windows.execan=2
+2.copy the Arduino-IRremote-master file that has been provided and then open the Arduino 
+  file on your computer at local disk/programfiles/arduino/libraries Paste the file
+  Arduino-IRremote-master tsdi.
+3.Run the Arduino IDE software, click File open and select the IR_Receiver file that 
+  has been provided or simply double-click on the IR_receiver.ino file
+4.prepare Arduino uno
+5.plug in the T-sop or IR Receiver included in the package. we have given the color on 
+  each leg of the T-Sop, red for Vcc, Black for Gnd, and blue or yellow for
+  to enter analog pin A0.
+6.connect the arduino that has been installed with T-sop and upload the IR_receiver. if successful, 
+  open Serial Monitor on Arduino IDE. by clicking on the magnifying glass icon in the right corner
+ software, and a new window will appear now press a button from the remote that has been provided. 
+ if a number or value comes out, it means you have succeeded in the first
+ stage.now open the IR_Onggobot.ino file after it appears click the ir_command_codes.h option and 
+ a command for the robot action will appear. your task now replaces the value
+ XXXXXXX in ir_command_codes.h with the number of each key you selected to perform the command. 
+ for example, you select button no.1 to go forward then press the number button 1
+ and the serial monitor will display a value for example 12345678 and now open the ir_command_codes.h 
+ window where you have entered the number from pressing button one to
+ 'const long IR_COMMAND_FORWARD_CODES[] = { xxxxxxxxx };'you change xxxx with the value 12345678  
+  obtained from serial monitor button no.1 so 'const long IR_COMMAND_FORWARD_CODES[] = { 12345678 };
+  and select another button for reverse turn command and others.
+7.if everything is filled now, upload ir.kolomonggobot.ino to arduino. when Upload done. 
+  means the robot is ready to receive commands from the remote control earlier.
+8.Install battery and your robot is ready
